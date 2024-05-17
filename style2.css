@@ -1,0 +1,188 @@
+/* welcome form */
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+* {
+    font-family: 'Share Tech Mono', monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    display:inline-block;
+    justify-content: center;
+    align-items: center;
+    background: #534B52;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.container-logout {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 20px; /* Adjust as needed */
+    height: min-content;
+}
+
+/* Welcome Text and hello name */
+/* Adjust the margin and padding as needed */
+span{
+    height: max-content;
+    text-align:center;
+    font-size: 25px;
+    color: #d5d5d5;
+}
+
+h2 {
+    height: min-content;
+    animation: appear 2s;
+    text-align:center;
+    font-size: 25px;
+    color: #d5d5d5;
+}
+
+h3 {
+    text-align:center;
+    color: #d5d5d5;
+    font-size: 20px;
+    animation: appear 2.5s;
+    height: min-content;
+}
+
+@keyframes shift {
+    0% {opacity:0;}
+    33% {
+     margin-top:0px;
+     opacity:0;}
+    100% {
+     padding-top: 10px;
+     margin-top: 10%;
+     opacity:1;
+     text-shadow: 
+      4px 4px 0px #d5d5d5, 
+      7px 7px 0px rgba(0, 0, 0, 0.2);}
+ }
+ 
+ @keyframes appear {
+    0% {opacity:0;}
+    50% {opacity:0;}
+    100% {opacity:1;}
+ }
+
+.neon {
+    color: #007bff;
+    font-size: 20px;
+    text-shadow: 0 0 10px #007bff, 0 0 20px #007bff;
+  }
+  
+.neon:hover {
+    color: #fff;
+}
+
+.text {
+    height: fit-content;
+    color: #d5d5d5;
+    letter-spacing: .05em;
+    text-shadow: 4px 4px 0px #2c2c2c, 7px 7px 0px rgba(213,213,213, 0.2);
+    font-size: 2.8em;
+    font-family: sans-serif;
+    animation: shift 2s;
+    padding-top: 10px;
+    margin-top: 10%;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+/* Table history */
+.table-container {
+    margin: 20px auto;
+    width: 80%; /* Adjust the width as needed */
+    height: auto; /* Adjust the height as needed */
+}
+.rwd-table {
+  margin: 1em 0;
+  min-width: 300px;
+}
+
+.rwd-table tr {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.rwd-table th {
+  display: block;
+}
+
+.rwd-table td {
+  display: block;
+}
+
+.rwd-table tr th:first-child,
+.rwd-table tr td:first-child {
+  width: 15em;
+  min-width: 15em;
+  max-width: 15em;
+  word-break: break-all;
+}
+
+.rwd-table td:first-child {
+  padding-top: .5em;
+}
+
+.rwd-table td:last-child {
+  padding-bottom: .5em;
+}
+
+.rwd-table td:before {
+  content: attr(data-th)": ";
+  font-weight: bold;
+  width: 6.5em;
+  display: inline-block;
+}
+
+.rwd-table {
+  background: #34495E;
+  box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2); 
+  backdrop-filter: blur(14px); 
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border-radius: .4em;
+  overflow: hidden;
+}
+
+.rwd-table tr {
+  border-color: lighten(#34495E, 10%);
+}
+
+/* Adjust the display of table cells */
+.rwd-table td,
+.rwd-table th {
+    display: table-cell;
+    text-align: left;
+    padding: .5em;
+}
+
+/* Hide table headers for mobile */
+@media screen and (max-width: 480px) {
+    .rwd-table th {
+        display: none;
+    }
+    .rwd-table td:before {
+        content: attr(data-th)": ";
+        font-weight: bold;
+        width: 6.5em;
+        display: inline-block;
+    }
+}
+
+.rwd-table th,
+.rwd-table td:before {
+  color: #dd5;
+}
